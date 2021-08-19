@@ -70,8 +70,8 @@ if num > 1:
 else:
     print(num,"no es un numero primo")
 
-# EJERCICIO 2
-print(factorizar_primos(28))  # Factores primos de 28
+# Corremos el ejercicio 2
+print(factorizar_primos(100000015037))  # Factores primos de 28
 
 # Definimos la funcion para dos numeros enteros positivos, de manera que saque el mayor divisor comun
 
