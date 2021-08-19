@@ -1,6 +1,12 @@
 # Proyecto corto discreta No.2
 # Factorizando primos en Python
 import numpy as np
+# Funciones a utilizar
+
+def gcd(a, b):
+    if a == 0 :
+        return b 
+    return gcd(b%a, a)
 
 def criba_eratostenes(n):
     """Criba Eratostenes"""
@@ -39,18 +45,6 @@ def factorizar_primos(n):
     
     return factores
 
-print(factorizar_primos(28))  # Factores primos de 28
-# Definimos la funcion para dos numeros enteros positivos, de manera que saque el mayor divisor comun
-def gcd(a, b):
-    if a == 0 :
-        return b 
-    return gcd(b%a, a)
-
-print("Bienvenido al algoritmo de euclides, porfavor ingrese dos enteros no negativos mayores a cero \n")
-a = int(input("Primero: "))
-b = int(input("Segundo: "))
-print("gcd(", a , "," , b, ") = ", gcd(a, b))
-
 #EJERCICIO 1
 
 # Program to check if a number is prime or not
@@ -62,19 +56,31 @@ num = int(input("Ingrese un numero: "))
 
 # prime numbers are greater than 1
 if num > 1:
-   # check for factors
-   for i in range(2,num):
-       if (num % i) == 0:
-           print(num,"no es un numero primo")
-           print(i,"veces",num//i,"es",num)
-           break
-   else:
-       print(num,"es un numero primo")
-       
+    # check for factors
+    for i in range(2,num):
+        if (num % i) == 0:
+            print(num,"no es un numero primo")
+            print(i,"veces",num//i,"es",num)
+            break
+    else:
+        print(num,"es un numero primo")
+        
 # if input number is less than
 # or equal to 1, it is not prime
 else:
-   print(num,"no es un numero primo")
+    print(num,"no es un numero primo")
+
+# EJERCICIO 2
+print(factorizar_primos(28))  # Factores primos de 28
+
+# Definimos la funcion para dos numeros enteros positivos, de manera que saque el mayor divisor comun
+
+# EJERCICIO 3
+print("Bienvenido al algoritmo de euclides, porfavor ingrese dos enteros no negativos mayores a cero \n")
+a = int(input("Primero: "))
+b = int(input("Segundo: "))
+print("gcd(", a , "," , b, ") = ", gcd(a, b))
+
 
 
 
